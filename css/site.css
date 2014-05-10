@@ -1,0 +1,24 @@
+.background-1 {
+  background-color: #BD8383;
+}
+.background-2 {
+  background-color: #BD8383;
+}
+
+.header {
+  text-shadow: 2px 2px #000000;
+  font-family: FortuneCity;
+  font-size: 10em;
+  margin-top: 1em;
+  color: #FFFFFF;
+}
+
+.input-container {
+    padding-bottom: 3em;
+}
+.input-container checkbox {
+    display: none;
+}
+
+@font-face { font-family: FortuneCity; src: url('../fonts/FortuneCity.ttf'); } 
+@font-face { font-family: FortuneCity; font-weight: bold; src: url('fonts/FortuneCity.ttf');}

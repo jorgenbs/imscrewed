@@ -1,12 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.3.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.3.min.js"></script>
+  <title></title>
+  <link rel="stylesheet" href="bower_components/uikit/dist/css/uikit.min.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <script type="text/javascript">
+    //expose azure client
+    window.client = new WindowsAzure.MobileServiceClient( "https://imscrewed.azure-mobile.net/", "MHqfGvNneLOJmWsNQhopOExMcMDqBR30" );
+  </script>
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="bower_components/uikit/dist/js/uikit.min.js"></script>
+  <script type="text/javascript" src="node_modules/moment/min/moment.min.js"></script>
+  <script type="text/javascript" src="js/expense.js"></script>
+  <script type="text/javascript" src="js/day.js"></script>
+  <script type="text/javascript" src="js/wallet.js"></script>
 </head>
 <body>
+    <div class="background-1 uk-width-1-1">
+        <div class="uk-container uk-container-center">
+            <div class="uk-text-center">
+                <h1 class="uk-heading-large header">IM SCREWED</h1>
+                <p class="uk-text-large">Stupid simple money tracker for the person with little cash untill the next paycheck.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="background-2 uk-width-1-1">
+        <div class="uk-container uk-container-center input-container uk-text-center">
+            <form class="uk-form">
 
-<script type="text/javascript">
-	var client = new WindowsAzure.MobileServiceClient( "https://imscrewed.azure-mobile.net/", "MHqfGvNneLOJmWsNQhopOExMcMDqBR30" );
-</script>
+                <fieldset data-uk-margin>
+                    <label>
+                        I got
+                        <input type="text" placeholder="10" />
+                    </label>
+                    <label>
+                        moneys until
+                        <input type="date" />
+                    </label>
+                </fieldset>
+                
+                <button class="uk-button">Setup "budget"</button>
+                <label><input type="checkbox">accumulate</label>
+            </form>
+        </div>
+    </div>
+    
+    <div class="uk-container uk-container-center uk-text-center">
+        <p class="uk-text-medium">Day by day, no backsies</p>
+    </div>
+
+    <!-- Make sure to remove this in production -->
+    <!-- include it above the </body> tag -->
+    <script>
+    var ws;
+    function socket() {
+      ws = new WebSocket("ws://127.0.0.1:8080");
+      ws.onmessage = function ( e ) {
+        var data = JSON.parse(e.data);
+        if ( data.r ) {
+          location.reload();
+        }
+      };
+    }
+    setInterval(function () {
+      if ( ws ) {
+        if ( ws.readyState !== 1 ) {
+          socket();
+        }
+      } else {
+        socket();
+      }
+    }, 1000);
+    </script>
 </body>
 </html>
