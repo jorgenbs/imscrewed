@@ -8,29 +8,30 @@ Wallet.prototype = new function() {
     this.days = [];
     this.goal = options.goal;
     this.created = moment();
-    this.container = options.container;
+    this.container = document.getElementById(options.container);
     this.accumulate = options.accumulate || true;
     this.grid = new Grid(this.container);
 
     for (var i = 0; i < options.duration; i++) {
       var day = new Day({ index: i, limit: this.goal });
-      this.days.push(day)
+      this.days.push(day);
       this.grid.placeItem(day);
     }
     
+    this._getToday().highlight = true;
   }
   
   this.addExpenseToday = function(amount) {
-    var day = this._getToday()
+    var today = this._getToday()
       , expense = new Expense(amount);
       
-    day.expenses.push(expense);
+    today.expenses.push(expense);
     
     if (this.accumulate) {
       var tomorrow = this._getTomorrow()
-        , balance = day.limit - amount;
       
-      if (tomorrow) tomorrow.limit += balance;
+      if (tomorrow) 
+        tomorrow.accumulated = (today.limit + today.accumulated) - amount;;
     }
   }
   
