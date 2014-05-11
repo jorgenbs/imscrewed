@@ -11,29 +11,35 @@
   box-shadow: 0px 5px 3px #888888;
   padding: 10px 20px 10px 20px;
   color: white;
+  font-weight: bold;
 }
-.positive li {
-  background-color: #000000;
+#screwed .positive {
+  background-color: #046600;
+  color: #FFFFFF;
 }
-.positive li {
-  background-color: #ffffff;
+#screwed .negative {
+  background-color: #E6899F;
 }
-
+.footer {
+  font-style: italic;
+  color: #999999;
+}
 .background-1 {
   background-color: #BD8383;
   background-image: url('/img/money-01.jpg');
 }
 .background-2 {
-  background-color: #1F0B0B;
+  background-color: #F1F1F1;
   padding-top: 20px;
-  color: white;
+  color: rgb(80, 80, 80);
 }
 .background-3 {
   background-color: #FFFFFF;
   height: 30em;
+  padding-top: 30px;
 }
 .background-4 {
-  background-color: #BD8383;
+  background-color: #FFFFFF;
 }
 
 .header {
@@ -42,6 +48,11 @@
   font-size: 10em;
   margin-top: 1em;
   color: #FFFFFF;
+}
+.header2 {
+    color: white;
+  
+    text-shadow: 2px 2px #000000;
 }
 
 .input-container {

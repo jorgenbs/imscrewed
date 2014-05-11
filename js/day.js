@@ -10,6 +10,7 @@ Day.prototype = new function() {
     this.limit = options.limit;
     this.accumulated = 0;
     this.expenses = [];
+    this.el = this._createEle();
   }
   
   this.totalExpenses  =function() {
@@ -20,5 +21,17 @@ Day.prototype = new function() {
     }
     
     return amount;
+  }
+  
+  this._createEle = function() {
+    var li = document.createElement("li");
+    li.classList.add("day");
+    
+    return li;
+  }
+  
+  this.animateEntrance = function() {
+    this.el.classList.add("animated");
+    this.el.classList.add("bounceInLeft");
   }
 }

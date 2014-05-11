@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="bower_components/uikit/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/animate.css" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <script type="text/javascript">
     //expose azure client
     window.client = new WindowsAzure.MobileServiceClient( "https://imscrewed.azure-mobile.net/", "MHqfGvNneLOJmWsNQhopOExMcMDqBR30" );
@@ -14,6 +15,7 @@
   <script src="bower_components/uikit/dist/js/uikit.min.js"></script>
   <script type="text/javascript" src="node_modules/moment/min/moment.min.js"></script>
   <script type="text/javascript" src="js/expense.js"></script>
+  <script type="text/javascript" src="js/grid.js"></script>
   <script type="text/javascript" src="js/day.js"></script>
   <script type="text/javascript" src="js/wallet.js"></script>
 </head>
@@ -21,7 +23,7 @@
     <div class="background-1 uk-width-1-1">
         <div class="uk-container uk-container-center">
             <div class="uk-text-center">
-                <h1 class="uk-heading-large header">IM SCREWED</h1>
+                <h1 class="uk-heading-large header">SCREWED</h1>
                 <p class="uk-text-large">Stupid simple money tracker for the person with little cash untill the next paycheck.</p>
             </div>
         </div>
@@ -52,14 +54,16 @@
     <div class="background-3 uk-width-1-1">
         <div class="screwed-container uk-container uk-container-center">
             <ul id="screwed">
-              <li class="day">150</li>
             </ul>
         </div>
     </div>
         
     <div class="background-4 uk-width-1-1 uk-footer">
       <div class="uk-container uk-container-center uk-text-center">
-          <p class="uk-text-medium">Day by day, no backsies</p>
+        <i class="fa fa-money"></i>
+          <p class="uk-text-medium">
+            Day by day, no backsies
+          </p>
       </div>
     </div>
 

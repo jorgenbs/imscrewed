@@ -8,10 +8,14 @@ Wallet.prototype = new function() {
     this.days = [];
     this.goal = options.goal;
     this.created = moment();
+    this.container = options.container;
     this.accumulate = options.accumulate || true;
+    this.grid = new Grid(this.container);
 
     for (var i = 0; i < options.duration; i++) {
-      this.days.push(new Day({ index: i, limit: this.goal }))
+      var day = new Day({ index: i, limit: this.goal });
+      this.days.push(day)
+      this.grid.placeItem(day);
     }
     
   }
