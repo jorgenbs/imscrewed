@@ -1,7 +1,38 @@
+#screwed {
+  -webkit-user-select: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#screwed .day {
+  position: absolute;
+  background-color: #ccc;
+  box-shadow: 0px 5px 3px #888888;
+  padding: 10px 20px 10px 20px;
+  color: white;
+}
+.positive li {
+  background-color: #000000;
+}
+.positive li {
+  background-color: #ffffff;
+}
+
 .background-1 {
   background-color: #BD8383;
+  background-image: url('/img/money-01.jpg');
 }
 .background-2 {
+  background-color: #1F0B0B;
+  padding-top: 20px;
+  color: white;
+}
+.background-3 {
+  background-color: #FFFFFF;
+  height: 30em;
+}
+.background-4 {
   background-color: #BD8383;
 }
 

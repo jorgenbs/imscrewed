@@ -5,6 +5,7 @@
   <title></title>
   <link rel="stylesheet" href="bower_components/uikit/dist/css/uikit.min.css" />
   <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/animate.css" />
   <script type="text/javascript">
     //expose azure client
     window.client = new WindowsAzure.MobileServiceClient( "https://imscrewed.azure-mobile.net/", "MHqfGvNneLOJmWsNQhopOExMcMDqBR30" );
@@ -43,12 +44,23 @@
                 
                 <button class="uk-button">Setup "budget"</button>
                 <label><input type="checkbox">accumulate</label>
+                
             </form>
         </div>
     </div>
     
-    <div class="uk-container uk-container-center uk-text-center">
-        <p class="uk-text-medium">Day by day, no backsies</p>
+    <div class="background-3 uk-width-1-1">
+        <div class="screwed-container uk-container uk-container-center">
+            <ul id="screwed">
+              <li class="day">150</li>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="background-4 uk-width-1-1 uk-footer">
+      <div class="uk-container uk-container-center uk-text-center">
+          <p class="uk-text-medium">Day by day, no backsies</p>
+      </div>
     </div>
 
     <!-- Make sure to remove this in production -->
