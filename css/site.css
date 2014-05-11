@@ -1,3 +1,6 @@
+html, body {
+  height: 100%;
+}
 #screwed {
   -webkit-user-select: none;
   position: absolute;
@@ -26,10 +29,10 @@
 }
 .background-1 {
   background-color: #BD8383;
-  background-image: url('/img/money-01.jpg');
 }
 .background-2 {
-  background-color: #F1F1F1;
+  /*background-color: #F1F1F1;*/
+  background-color: rgba(255,255,255,1);
   padding-top: 20px;
   color: rgb(80, 80, 80);
 }
@@ -39,7 +42,7 @@
   padding-top: 30px;
 }
 .background-4 {
-  background-color: #FFFFFF;
+  background-color: rgba(255,255,255,0.9);
 }
 
 .header {
@@ -64,3 +67,7 @@
 
 @font-face { font-family: FortuneCity; src: url('../fonts/FortuneCity.ttf'); } 
 @font-face { font-family: FortuneCity; font-weight: bold; src: url('fonts/FortuneCity.ttf');}
+
+body {
+  background-image: url("/img/money-01.jpg");
+}
