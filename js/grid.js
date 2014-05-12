@@ -24,8 +24,8 @@ Grid.prototype = new function () {
     
     this.container.appendChild(item.el);
     
-    item.el.style.left = (this.col * OFFSET_WIDTH ) + "px";
-    item.el.style.top = (this.row * OFFSET_HEIGHT) + "px";
+    item.x = (item.width + OFFSET_WIDTH) * this.col;
+    item.y = (item.height + OFFSET_HEIGHT) * this.row ;
     item.animateEntrance();
     
     this.matrix[this.row][this.col] = item;

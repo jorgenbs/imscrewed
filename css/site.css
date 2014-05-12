@@ -58,6 +58,11 @@ html, body {
     text-shadow: 2px 2px #000000;
 }
 
+.hightlight {
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+}
+
 .input-container {
     padding-bottom: 3em;
 }
