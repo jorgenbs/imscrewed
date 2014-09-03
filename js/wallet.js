@@ -55,8 +55,6 @@ Wallet.prototype = new function() {
     
     return difference;
   }
-  
-  
   /*
   Object.setProperty(this, "current", {
     get: function() {
